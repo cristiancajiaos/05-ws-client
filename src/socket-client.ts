@@ -5,7 +5,15 @@ let socket: Socket;
 export const connectToServer = (token: string) => {
 
   // http://localhost:3000/socket.io/socket.io.js
+  /*
   const manager = new Manager('http://localhost:3000/socket.io/socket.io.js', {
+    extraHeaders: {
+      hola: 'mundo',
+      authentication: token
+    }
+  });
+  */
+  const manager = new Manager('https://zero4-teslo-shop-9zl9.onrender.com/socket.io/socket.io.min.js', {
     extraHeaders: {
       hola: 'mundo',
       authentication: token
